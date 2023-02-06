@@ -26,9 +26,9 @@ https://www.youtube.com/watch?v=dwcT-Dch0bA
 hierarchy:
 Application -+
              |
-		   	 +- Model
+	     +- Model
              |
-			 +- View -+
+	     +- View -+
              |        |
              |        +- PlayerModel
              |        |
@@ -36,7 +36,7 @@ Application -+
              |        |
              |        +- PlayerController
              |          			
-			 +- Controller
+	     +- Controller
 			 
 You can see the original code in these files:
 CharacterController2D.cs
