@@ -56,8 +56,16 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CubeSpawner.cs" />
     <Compile Include="Assets\Scripts\CubeObject.cs" />
+    <Compile Include="Assets\Scripts\Actions\ActionRight.cs" />
+    <Compile Include="Assets\Scripts\IAction.cs" />
+    <Compile Include="Assets\Scripts\Actions\ActionBack.cs" />
+    <Compile Include="Assets\Scripts\Actions\ActionForward.cs" />
+    <Compile Include="Assets\Scripts\CubeSpawner.cs" />
+    <Compile Include="Assets\Scripts\Invoker.cs" />
+    <Compile Include="Assets\Scripts\PlayerObject.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Actions\ActionLeft.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
