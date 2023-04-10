@@ -2,13 +2,25 @@
 
 namespace AdaptorPattern
 {
-    public class JsonDataAdapter<T> : IFileMaker
+    public class JsonDataAdapter : IFileMaker
     {
         private readonly CsvFileMaker _csvMaker;
 
-        public JsonDataAdapter(dynamic csvMaker)
+        public JsonDataAdapter(CsvFileMaker csvMaker)
         {
             _csvMaker = csvMaker;
+        }
+
+        public JsonDataAdapter(IFileMaker csvMaker)
+        {
+            if (csvMaker is CsvFileMaker maker)
+            {
+                _csvMaker = maker;
+            }
+            else
+            {
+                throw new ArgumentException("JsonDataAdapter only accepts objects of type CsvFileMaker");
+            }
         }
 
         public string GetFileText()
