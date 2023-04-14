@@ -1,7 +1,7 @@
 ﻿namespace visitorPattern
 {
-    internal interface ICarVisitor<T>
+    internal interface ICarVisitor
     {
-        T Visit(CarClass car);
+        void Visits(CarClass car);
     }
 }

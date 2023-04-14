@@ -1,19 +1,22 @@
 ﻿using visitorPattern;
 CarClass pickup = new CarBuilder(new DieselPickup()).CreateCar();
 CarClass sedan = new CarBuilder(new ElectricSedan()).CreateCar();
+ConcreteVisitor visitor = new();
 
 Console.WriteLine("Truck:");
 Console.WriteLine("---------------");
 Console.WriteLine(pickup.ToString());
 Console.WriteLine("---------------");
-Console.WriteLine($"Max Range: {new RangeVisitor().Visit(pickup)} miles");
-Console.WriteLine($"0 to 60 time: {new TimeTo60Visitor().Visit(pickup)} seconds");
-Console.WriteLine($"Load Capacity: {new LoadCapacityVisitor().Visit(pickup)} kg");
+visitor.Visits(pickup);
+Console.WriteLine($"Max Range: {visitor.Range} miles");
+Console.WriteLine($"0 to 60 time: {visitor.TimeTo60} seconds");
+Console.WriteLine($"Load Capacity: {visitor.LoadCapacity} kg");
 Console.WriteLine("===========================================");
 Console.WriteLine("Sedan:");
 Console.WriteLine("---------------");
 Console.WriteLine(sedan.ToString());
 Console.WriteLine("---------------");
-Console.WriteLine($"Max Range: {new RangeVisitor().Visit(sedan)} miles");
-Console.WriteLine($"0 to 60 time: {new TimeTo60Visitor().Visit(sedan)} seconds");
-Console.WriteLine($"Load Capacity: {new LoadCapacityVisitor().Visit(sedan)} kg");
+visitor.Visits(sedan);
+Console.WriteLine($"Max Range: {visitor.Range} miles");
+Console.WriteLine($"0 to 60 time: {visitor.TimeTo60} seconds");
+Console.WriteLine($"Load Capacity: {visitor.LoadCapacity} kg");

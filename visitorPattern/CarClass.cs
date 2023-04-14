@@ -37,5 +37,10 @@
                 $"{CenterConsole}\n" +
                 $"{CruiseControl}";
         }
+
+        public void Accept(ICarVisitor visitor)
+        {
+            visitor.Visits(this);
+        }
     }
 }
